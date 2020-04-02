@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace NMIT_Enrolment_Tutorial
 {
-    public class ClsStudent
+    abstract public class ClsStudent
     {
         private string _ID;
         private string _Name;
         private DateTime _DOB = DateTime.Today;
         private decimal _Balance;
+        public static readonly string[] _StudentType = { "MOE (local)", "International" };
 
         public override string ToString()
         {
@@ -41,5 +42,15 @@ namespace NMIT_Enrolment_Tutorial
             get { return _Balance; }
             set { _Balance = value; }
         }
+
+        public static ClsStudent NewStudent(int prChoice)
+        {
+            if (prChoice == 0)
+                return new ClsMOEStudent();
+            else
+                return new ClsInternationalStudent();
+        }
+
+        public abstract bool ViewEdit();
     }
 }

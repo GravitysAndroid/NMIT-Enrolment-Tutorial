@@ -53,6 +53,7 @@
             this.BtnModifyStudent.TabIndex = 1;
             this.BtnModifyStudent.Text = "Modify";
             this.BtnModifyStudent.UseVisualStyleBackColor = true;
+            this.BtnModifyStudent.Click += new System.EventHandler(this.BtnModifyStudent_Click);
             // 
             // LblStudentDetails
             // 

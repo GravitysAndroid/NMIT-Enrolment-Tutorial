@@ -31,17 +31,7 @@ namespace NMIT_Enrolment_Tutorial
 
         private void BtnCreateStudent_Click(object sender, EventArgs e)
         {
-            if (CboStudentType.SelectedIndex == 0)
-            {
-                _StudentForm = _MOEStudentForm;
-                _Student = new ClsMOEStudent();
-            }
-            else
-            {
-                _StudentForm = _IntStudentForm;
-                _Student = new ClsInternationalStudent();
-            }
-
+            createStudent();
             EditStudent();
         }
 
@@ -52,9 +42,30 @@ namespace NMIT_Enrolment_Tutorial
             {
                 LblStudentDetails.Text = "Student:\n" + _Student.ToString();
             }
+            else
+            {
+                createStudent();
+            }
         }
 
+        private void BtnModifyStudent_Click(object sender, EventArgs e)
+        {
+            EditStudent();
+        }
 
+        private void createStudent()
+        {
+            if (CboStudentType.SelectedIndex == 0)
+            {
+                _StudentForm = _MOEStudentForm;
+                _Student = new ClsMOEStudent();
+            }
+            else
+            {
+                _StudentForm = _IntStudentForm;
+                _Student = new ClsInternationalStudent();
+            }
+        }
     }
 }
 
