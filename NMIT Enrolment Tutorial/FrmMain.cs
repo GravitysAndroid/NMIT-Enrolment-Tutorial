@@ -41,7 +41,7 @@ namespace NMIT_Enrolment_Tutorial
                 _StudentForm = _IntStudentForm;
                 _Student = new ClsInternationalStudent();
             }
-            
+
             EditStudent();
         }
 
