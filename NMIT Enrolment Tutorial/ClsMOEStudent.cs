@@ -10,6 +10,12 @@ namespace NMIT_Enrolment_Tutorial
     {
         private decimal _LoanAmount;
         private bool _FullTime;
+        private FrmMOEStudent _Form;
+
+        public override bool ViewEdit()
+        {
+            return _Form.ShowDialog(this);
+        }
 
         public decimal LoanAmount 
         { 

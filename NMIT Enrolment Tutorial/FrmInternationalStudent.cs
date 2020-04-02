@@ -16,6 +16,13 @@ namespace NMIT_Enrolment_Tutorial
         {
             InitializeComponent();
         }
+
+        private FrmInternationalStudent _Form;
+
+        public override bool ViewEdit()
+        {
+            return _Form.ShowDialog(this);
+        }
         protected override void UpdateDisplay()
         {
             base.UpdateDisplay();
