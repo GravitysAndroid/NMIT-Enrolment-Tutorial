@@ -12,7 +12,7 @@ namespace NMIT_Enrolment_Tutorial
 {
     public partial class FrmStudent : Form
     {
-        private ClsStudent _Student;
+        protected ClsStudent _Student;
 
         public FrmStudent()
         {
@@ -26,7 +26,7 @@ namespace NMIT_Enrolment_Tutorial
             return ShowDialog();
         }
 
-        private void UpdateDisplay()
+        protected virtual void UpdateDisplay()
         {
             TxtID.Text = _Student.ID;
             TxtName.Text = _Student.Name;
@@ -37,11 +37,16 @@ namespace NMIT_Enrolment_Tutorial
 
         private void BtnOK_Click(object sender, EventArgs e)
         {
+            PushData();
+            DialogResult = DialogResult.OK;
+        }
+
+        protected virtual void PushData()
+        {
             _Student.ID = TxtID.Text;
             _Student.Name = TxtName.Text;
-            _Student.DOB= DtpDOB.Value;
+            _Student.DOB = DtpDOB.Value;
             _Student.Balance = Convert.ToDecimal(TxtBalance.Text);
-            DialogResult = DialogResult.OK;
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)

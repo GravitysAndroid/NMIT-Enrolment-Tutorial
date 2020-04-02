@@ -13,10 +13,16 @@ namespace NMIT_Enrolment_Tutorial
     public partial class FrmMain : Form
     {
         private ClsStudent _Student;
-        private FrmStudent _StudentForm = new FrmStudent();
+        private FrmStudent _StudentForm;
+        private FrmStudent _MOEStudentForm = new FrmMOEStudent();
+        private FrmStudent _IntStudentForm = new FrmInternationalStudent();
+        private string[] _StudentType = { "MOE (local)", "International" };
+
         public FrmMain()
         {
             InitializeComponent();
+            CboStudentType.DataSource = _StudentType;
+            CboStudentType.SelectedIndex = 0;
         }
         private void BtnClose_Click(object sender, EventArgs e)
         {
@@ -25,7 +31,17 @@ namespace NMIT_Enrolment_Tutorial
 
         private void BtnCreateStudent_Click(object sender, EventArgs e)
         {
-            _Student = new ClsStudent();
+            if (CboStudentType.SelectedIndex == 0)
+            {
+                _StudentForm = _MOEStudentForm;
+                _Student = new ClsMOEStudent();
+            }
+            else
+            {
+                _StudentForm = _IntStudentForm;
+                _Student = new ClsInternationalStudent();
+            }
+            
             EditStudent();
         }
 

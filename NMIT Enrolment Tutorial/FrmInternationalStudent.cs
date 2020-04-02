@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace NMIT_Enrolment_Tutorial
 {
-    public partial class FrmInternationalStudent : Form
+    public partial class FrmInternationalStudent : FrmStudent
     {
         public FrmInternationalStudent()
         {
             InitializeComponent();
+        }
+        protected override void UpdateDisplay()
+        {
+            base.UpdateDisplay();
+            ClsInternationalStudent lcStudent = (ClsInternationalStudent)_Student;
+            TxtCountry.Text = lcStudent.Country;
+            TxtELTS.Text = lcStudent.ELTS;
+        }
+
+        protected override void PushData()
+        {
+            base.PushData();
+            ClsInternationalStudent lcStudent = (ClsInternationalStudent)_Student;
+            lcStudent.Country = TxtCountry.Text;
+            lcStudent.ELTS = TxtELTS.Text;
         }
     }
 }
