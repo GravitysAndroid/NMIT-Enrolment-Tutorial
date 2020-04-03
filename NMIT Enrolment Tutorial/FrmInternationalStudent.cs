@@ -12,12 +12,11 @@ namespace NMIT_Enrolment_Tutorial
 {
     public partial class FrmInternationalStudent : FrmStudent
     {
+        private static FrmInternationalStudent _Form;
         public FrmInternationalStudent()
         {
             InitializeComponent();
         }
-
-        private FrmInternationalStudent _Form;
 
         public override bool ViewEdit()
         {
