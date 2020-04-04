@@ -19,11 +19,11 @@ namespace NMIT_Enrolment_Tutorial
             InitializeComponent();
         }
 
-        public DialogResult ShowDialog(ClsStudent prStudent)
+        public new bool ShowDialog(ClsStudent prStudent)
         {
             _Student = prStudent;
             UpdateDisplay();
-            return ShowDialog();
+            return ShowDialog() == DialogResult.OK;
         }
 
         protected virtual void UpdateDisplay()
