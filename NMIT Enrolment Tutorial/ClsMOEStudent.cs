@@ -12,11 +12,6 @@ namespace NMIT_Enrolment_Tutorial
         private bool _FullTime;
         private static FrmMOEStudent _Form;
 
-        public override bool ViewEdit()
-        {
-            return _Form.ShowDialog(this);
-        }
-
         public decimal LoanAmount 
         { 
             get => _LoanAmount; 
@@ -26,6 +21,11 @@ namespace NMIT_Enrolment_Tutorial
         { 
             get => _FullTime; 
             set => _FullTime = value; 
+        }
+
+        public override bool ViewEdit()
+        {
+            return _Form.ShowDialog(this);
         }
     }
 }
