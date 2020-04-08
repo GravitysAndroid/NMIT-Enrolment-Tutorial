@@ -19,7 +19,7 @@ namespace NMIT_Enrolment_Tutorial
             InitializeComponent();
         }
 
-        public new bool ShowDialog(ClsStudent prStudent)
+        public bool ShowDialog(ClsStudent prStudent)
         {
             _Student = prStudent;
             UpdateDisplay();

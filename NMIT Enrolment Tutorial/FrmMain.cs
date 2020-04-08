@@ -37,7 +37,7 @@ namespace NMIT_Enrolment_Tutorial
 
         private void EditStudent(ClsStudent prStudent)
         {
-            if (prStudent != null && prStudent.ViewEdit()
+            if (prStudent != null && prStudent.ViewEdit())
             {
                 _Student = prStudent;
                 LblStudentDetails.Text = "Student:\n" + _Student.ToString();
