@@ -10,7 +10,8 @@ namespace NMIT_Enrolment_Tutorial
     {
         private string _Country;
         private string _ELTS;
-        private static FrmInternationalStudent _Form;
+        //private static FrmInternationalStudent _IntStudentForm;
+        private static FrmStudent _IntStudentForm = new FrmInternationalStudent();
 
         public string Country 
         { 
@@ -22,9 +23,10 @@ namespace NMIT_Enrolment_Tutorial
             get => _ELTS; 
             set => _ELTS = value; 
         }
+
         public override bool ViewEdit()
         {
-            return _Form.ShowDialog(this);
+            return _IntStudentForm.ShowDialog(this);
         }
     }
 }
