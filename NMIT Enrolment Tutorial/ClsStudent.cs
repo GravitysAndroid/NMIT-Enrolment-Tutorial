@@ -16,7 +16,7 @@ namespace NMIT_Enrolment_Tutorial
 
         public override string ToString()
         {
-            return _ID + "\n" + _Name;
+            return _ID + "\n" + _Name + "\t" + TypeOfStudent();
         }
 
         public string ID
@@ -52,10 +52,8 @@ namespace NMIT_Enrolment_Tutorial
         }
         public abstract bool ViewEdit();
 
-        protected abstract TypeOfStudent()
-        {
-            return TypeOfStudent.ShowDialog(string);
-        }
+        protected abstract string TypeOfStudent();
+
 
     }
 }
