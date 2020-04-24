@@ -26,7 +26,7 @@ namespace NMIT_Enrolment_Tutorial
 
         public override bool ViewEdit()
         {
-            return _MOEStudentForm.ShowDialog(this);
+            return _MOEStudentForm.ShowDialog(MOE);
         }
     }
 }

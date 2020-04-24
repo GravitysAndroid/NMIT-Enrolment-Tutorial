@@ -51,5 +51,11 @@ namespace NMIT_Enrolment_Tutorial
                 return new ClsInternationalStudent();
         }
         public abstract bool ViewEdit();
+
+        protected abstract TypeOfStudent()
+        {
+            return TypeOfStudent.ShowDialog(string);
+        }
+
     }
 }
