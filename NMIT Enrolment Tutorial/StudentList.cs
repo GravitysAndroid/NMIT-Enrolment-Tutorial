@@ -28,24 +28,28 @@ namespace NMIT_Enrolment_Tutorial
                 ClsInstitute.StudentList.Add(lcStudent);
                 UpdateDisplay();
             }
-            EditStudent(lcStudent);
+            //EditStudent(lcStudent);
         }
 
         private void btnModStudent_Click(object sender, EventArgs e)
         {
-            EditStudent(_Student);
+            ClsStudent lcStudent = (ClsStudent)lstStudents.SelectedItem;
+            if (lcStudent != null && lcStudent.ViewEdit())
+            {
+                UpdateDisplay();
+            } 
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
         }
+
         private void EditStudent(ClsStudent prStudent)
         {
             if (prStudent != null && prStudent.ViewEdit())
             {
                 _Student = prStudent;
-                //LblStudentDetails.Text = "Student:\n" + _Student.ToString();
             }
         }
 

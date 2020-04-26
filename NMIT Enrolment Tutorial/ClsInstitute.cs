@@ -12,7 +12,15 @@ namespace NMIT_Enrolment_Tutorial
 
         public static List<ClsStudent> StudentList 
         { 
-            get => _StudentList; /*set => _StudentList = value*/; 
+            get => _StudentList; /*set => _StudentList = value;*/
+        }
+
+        public static decimal TotalBalance()
+        {
+            decimal lcTotal = 0;
+            foreach (ClsStudent lcStudent in _StudentList)
+                lcTotal += lcStudent.Balance;
+            return lcTotal;
         }
     }
 }

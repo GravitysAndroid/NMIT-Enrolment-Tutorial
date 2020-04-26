@@ -26,7 +26,15 @@ namespace NMIT_Enrolment_Tutorial
 
         public override bool ViewEdit()
         {
-            return _IntStudentForm.ShowDialog(Intl);
+            return _IntStudentForm.ShowDialog(this);
+        }
+
+        //private FrmStudent _MOEStudentForm = new FrmMOEStudent();
+        private readonly string Intl;
+
+        protected override string TypeOfStudent()
+        {
+            return Intl;
         }
     }
 }

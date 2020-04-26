@@ -50,10 +50,9 @@ namespace NMIT_Enrolment_Tutorial
             else
                 return new ClsInternationalStudent();
         }
+
         public abstract bool ViewEdit();
 
         protected abstract string TypeOfStudent();
-
-
     }
 }
