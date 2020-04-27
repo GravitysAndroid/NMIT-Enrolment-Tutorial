@@ -30,7 +30,7 @@
         {
             this.LblStudentDetails = new System.Windows.Forms.Label();
             this.BtnClose = new System.Windows.Forms.Button();
-            this.btnManageStudents = new System.Windows.Forms.Button();
+            this.BtnManageStudents = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblStudentDetails
@@ -53,22 +53,22 @@
             this.BtnClose.UseVisualStyleBackColor = true;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // btnManageStudents
+            // BtnManageStudents
             // 
-            this.btnManageStudents.Location = new System.Drawing.Point(13, 13);
-            this.btnManageStudents.Name = "btnManageStudents";
-            this.btnManageStudents.Size = new System.Drawing.Size(100, 23);
-            this.btnManageStudents.TabIndex = 4;
-            this.btnManageStudents.Text = "Manage Students";
-            this.btnManageStudents.UseVisualStyleBackColor = true;
-            this.btnManageStudents.Click += new System.EventHandler(this.btnManageStudents_Click);
+            this.BtnManageStudents.Location = new System.Drawing.Point(13, 13);
+            this.BtnManageStudents.Name = "BtnManageStudents";
+            this.BtnManageStudents.Size = new System.Drawing.Size(100, 23);
+            this.BtnManageStudents.TabIndex = 4;
+            this.BtnManageStudents.Text = "Manage Students";
+            this.BtnManageStudents.UseVisualStyleBackColor = true;
+            this.BtnManageStudents.Click += new System.EventHandler(this.BtnManageStudents_Click_1);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(268, 156);
-            this.Controls.Add(this.btnManageStudents);
+            this.Controls.Add(this.BtnManageStudents);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.LblStudentDetails);
             this.Name = "FrmMain";
@@ -81,7 +81,7 @@
         #endregion
         private System.Windows.Forms.Label LblStudentDetails;
         private System.Windows.Forms.Button BtnClose;
-        private System.Windows.Forms.Button btnManageStudents;
+        private System.Windows.Forms.Button BtnManageStudents;
     }
 }
 

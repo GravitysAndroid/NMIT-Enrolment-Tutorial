@@ -20,31 +20,6 @@ namespace NMIT_Enrolment_Tutorial
             CboStudentType.SelectedIndex = 0;
         }
 
-        private void btnCreateStudent_Click(object sender, EventArgs e)
-        {
-            ClsStudent lcStudent = ClsStudent.NewStudent(CboStudentType.SelectedIndex);
-            if (lcStudent != null && lcStudent.ViewEdit())
-            {
-                ClsInstitute.StudentList.Add(lcStudent);
-                UpdateDisplay();
-            }
-            //EditStudent(lcStudent);
-        }
-
-        private void btnModStudent_Click(object sender, EventArgs e)
-        {
-            ClsStudent lcStudent = (ClsStudent)lstStudents.SelectedItem;
-            if (lcStudent != null && lcStudent.ViewEdit())
-            {
-                UpdateDisplay();
-            } 
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void EditStudent(ClsStudent prStudent)
         {
             if (prStudent != null && prStudent.ViewEdit())
@@ -57,6 +32,31 @@ namespace NMIT_Enrolment_Tutorial
         {
             lstStudents.DataSource = null; 
             lstStudents.DataSource = ClsInstitute.StudentList;
+        }
+
+        private void BtnClose_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnCreateStudent_Click_1(object sender, EventArgs e)
+        {
+            ClsStudent lcStudent = ClsStudent.NewStudent(CboStudentType.SelectedIndex);
+            if (lcStudent != null && lcStudent.ViewEdit())
+            {
+                ClsInstitute.StudentList.Add(lcStudent);
+                UpdateDisplay();
+            }
+            //EditStudent(lcStudent);
+        }
+
+        private void BtnModStudent_Click_1(object sender, EventArgs e)
+        {
+            ClsStudent lcStudent = (ClsStudent)lstStudents.SelectedItem;
+            if (lcStudent != null && lcStudent.ViewEdit())
+            {
+                UpdateDisplay();
+            }
         }
     }
 }

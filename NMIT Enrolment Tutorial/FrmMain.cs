@@ -22,7 +22,7 @@ namespace NMIT_Enrolment_Tutorial
             Close();
         }
 
-        private void btnManageStudents_Click(object sender, EventArgs e)
+        private void BtnManageStudents_Click_1(object sender, EventArgs e)
         {
             FrmStudentList _FrmStudentList = new FrmStudentList();
             _FrmStudentList.ShowDialog();

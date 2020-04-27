@@ -30,9 +30,9 @@
         {
             this.lstStudents = new System.Windows.Forms.ListBox();
             this.CboStudentType = new System.Windows.Forms.ComboBox();
-            this.btnCreateStudent = new System.Windows.Forms.Button();
-            this.btnModStudent = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.BtnCreateStudent = new System.Windows.Forms.Button();
+            this.BtnModStudent = new System.Windows.Forms.Button();
+            this.BtnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstStudents
@@ -51,44 +51,44 @@
             this.CboStudentType.Size = new System.Drawing.Size(121, 21);
             this.CboStudentType.TabIndex = 1;
             // 
-            // btnCreateStudent
+            // BtnCreateStudent
             // 
-            this.btnCreateStudent.Location = new System.Drawing.Point(12, 217);
-            this.btnCreateStudent.Name = "btnCreateStudent";
-            this.btnCreateStudent.Size = new System.Drawing.Size(95, 23);
-            this.btnCreateStudent.TabIndex = 2;
-            this.btnCreateStudent.Text = "Create Student";
-            this.btnCreateStudent.UseVisualStyleBackColor = true;
-            this.btnCreateStudent.Click += new System.EventHandler(this.btnCreateStudent_Click);
+            this.BtnCreateStudent.Location = new System.Drawing.Point(12, 217);
+            this.BtnCreateStudent.Name = "BtnCreateStudent";
+            this.BtnCreateStudent.Size = new System.Drawing.Size(95, 23);
+            this.BtnCreateStudent.TabIndex = 2;
+            this.BtnCreateStudent.Text = "Create Student";
+            this.BtnCreateStudent.UseVisualStyleBackColor = true;
+            this.BtnCreateStudent.Click += new System.EventHandler(this.BtnCreateStudent_Click_1);
             // 
-            // btnModStudent
+            // BtnModStudent
             // 
-            this.btnModStudent.Location = new System.Drawing.Point(12, 246);
-            this.btnModStudent.Name = "btnModStudent";
-            this.btnModStudent.Size = new System.Drawing.Size(95, 23);
-            this.btnModStudent.TabIndex = 3;
-            this.btnModStudent.Text = "Modify Student";
-            this.btnModStudent.UseVisualStyleBackColor = true;
-            this.btnModStudent.Click += new System.EventHandler(this.btnModStudent_Click);
+            this.BtnModStudent.Location = new System.Drawing.Point(12, 246);
+            this.BtnModStudent.Name = "BtnModStudent";
+            this.BtnModStudent.Size = new System.Drawing.Size(95, 23);
+            this.BtnModStudent.TabIndex = 3;
+            this.BtnModStudent.Text = "Modify Student";
+            this.BtnModStudent.UseVisualStyleBackColor = true;
+            this.BtnModStudent.Click += new System.EventHandler(this.BtnModStudent_Click_1);
             // 
-            // btnClose
+            // BtnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(321, 246);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 4;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.BtnClose.Location = new System.Drawing.Point(321, 246);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(75, 23);
+            this.BtnClose.TabIndex = 4;
+            this.BtnClose.Text = "Close";
+            this.BtnClose.UseVisualStyleBackColor = true;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click_1);
             // 
             // FrmStudentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 273);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnModStudent);
-            this.Controls.Add(this.btnCreateStudent);
+            this.Controls.Add(this.BtnClose);
+            this.Controls.Add(this.BtnModStudent);
+            this.Controls.Add(this.BtnCreateStudent);
             this.Controls.Add(this.CboStudentType);
             this.Controls.Add(this.lstStudents);
             this.Name = "FrmStudentList";
@@ -101,8 +101,8 @@
 
         private System.Windows.Forms.ListBox lstStudents;
         private System.Windows.Forms.ComboBox CboStudentType;
-        private System.Windows.Forms.Button btnCreateStudent;
-        private System.Windows.Forms.Button btnModStudent;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button BtnCreateStudent;
+        private System.Windows.Forms.Button BtnModStudent;
+        private System.Windows.Forms.Button BtnClose;
     }
 }
