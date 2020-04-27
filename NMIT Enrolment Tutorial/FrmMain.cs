@@ -12,6 +12,7 @@ namespace NMIT_Enrolment_Tutorial
 {
     public partial class FrmMain : Form
     {
+        private FrmStudentList _FrmStudentList = new FrmStudentList();
         public FrmMain()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace NMIT_Enrolment_Tutorial
 
         private void BtnManageStudents_Click_1(object sender, EventArgs e)
         {
-            FrmStudentList _FrmStudentList = new FrmStudentList();
+            //FrmStudentList _FrmStudentList = new FrmStudentList();
             _FrmStudentList.ShowDialog();
             LblStudentDetails.Text = string.Format("{0} Student(s)\nTotal Balance: {1:C}", ClsInstitute.StudentList.Count, ClsInstitute.TotalBalance());
         }
