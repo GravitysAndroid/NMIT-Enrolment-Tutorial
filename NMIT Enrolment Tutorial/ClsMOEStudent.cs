@@ -10,6 +10,7 @@ namespace NMIT_Enrolment_Tutorial
     {
         private decimal _LoanAmount;
         private bool _FullTime;
+        private FrmStudent _MOEStudentForm = new FrmMOEStudent();
 
         public decimal LoanAmount 
         { 
@@ -26,9 +27,6 @@ namespace NMIT_Enrolment_Tutorial
         {
             return _MOEStudentForm.ShowDialog(this);
         }
-
-        private FrmStudent _MOEStudentForm = new FrmMOEStudent();
-
 
         protected override string TypeOfStudent()
         {

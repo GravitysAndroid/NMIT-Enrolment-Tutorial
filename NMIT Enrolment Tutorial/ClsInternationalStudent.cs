@@ -10,7 +10,6 @@ namespace NMIT_Enrolment_Tutorial
     {
         private string _Country;
         private string _ELTS;
-        //private static FrmInternationalStudent _IntStudentForm;
         private static FrmStudent _IntStudentForm = new FrmInternationalStudent();
 
         public string Country 
