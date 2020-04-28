@@ -29,12 +29,11 @@ namespace NMIT_Enrolment_Tutorial
             return _IntStudentForm.ShowDialog(this);
         }
 
-        //private FrmStudent _MOEStudentForm = new FrmMOEStudent();
-        private readonly string Intl;
 
         protected override string TypeOfStudent()
         {
-            return Intl;
+            return "Intl";
         }
+
     }
 }
