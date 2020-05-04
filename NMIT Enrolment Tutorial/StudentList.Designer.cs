@@ -36,6 +36,8 @@
             this.LblID = new System.Windows.Forms.Label();
             this.LblName = new System.Windows.Forms.Label();
             this.LblType = new System.Windows.Forms.Label();
+            this.BtnFind = new System.Windows.Forms.Button();
+            this.TxtID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lstStudents
@@ -112,11 +114,30 @@
             this.LblType.TabIndex = 7;
             this.LblType.Text = "Type of Student";
             // 
+            // BtnFind
+            // 
+            this.BtnFind.Location = new System.Drawing.Point(157, 217);
+            this.BtnFind.Name = "BtnFind";
+            this.BtnFind.Size = new System.Drawing.Size(75, 23);
+            this.BtnFind.TabIndex = 8;
+            this.BtnFind.Text = "Find Student";
+            this.BtnFind.UseVisualStyleBackColor = true;
+            this.BtnFind.Click += new System.EventHandler(this.BtnFind_Click);
+            // 
+            // TxtID
+            // 
+            this.TxtID.Location = new System.Drawing.Point(143, 246);
+            this.TxtID.Name = "TxtID";
+            this.TxtID.Size = new System.Drawing.Size(100, 20);
+            this.TxtID.TabIndex = 9;
+            // 
             // FrmStudentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 273);
+            this.Controls.Add(this.TxtID);
+            this.Controls.Add(this.BtnFind);
             this.Controls.Add(this.LblType);
             this.Controls.Add(this.LblName);
             this.Controls.Add(this.LblID);
@@ -142,5 +163,7 @@
         private System.Windows.Forms.Label LblID;
         private System.Windows.Forms.Label LblName;
         private System.Windows.Forms.Label LblType;
+        private System.Windows.Forms.Button BtnFind;
+        private System.Windows.Forms.TextBox TxtID;
     }
 }

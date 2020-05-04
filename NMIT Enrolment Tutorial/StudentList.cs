@@ -58,5 +58,15 @@ namespace NMIT_Enrolment_Tutorial
                 UpdateDisplay();
             }
         }
+
+        private void BtnFind_Click(object sender, EventArgs e)
+        {
+            ClsStudent lcStudent;
+            if (ClsInstitute.StudentList.TryGetValue(TxtID.Text, out lcStudent))
+            {
+                lstStudents.SelectedItem = lcStudent;
+
+            }
+        }
     }
 }
