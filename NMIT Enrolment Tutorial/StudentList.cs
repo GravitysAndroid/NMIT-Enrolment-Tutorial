@@ -30,8 +30,8 @@ namespace NMIT_Enrolment_Tutorial
 
         private void UpdateDisplay()
         {
-            lstStudents.DataSource = null; 
-            lstStudents.DataSource = ClsInstitute.StudentList;
+            lstStudents.DataSource = null;
+            lstStudents.DataSource = ClsInstitute.StudentList.Values.ToList();
         }
 
         private void BtnClose_Click_1(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace NMIT_Enrolment_Tutorial
             ClsStudent lcStudent = ClsStudent.NewStudent(CboStudentType.SelectedIndex);
             if (lcStudent != null && lcStudent.ViewEdit())
             {
-                ClsInstitute.StudentList.Add(lcStudent);
+                ClsInstitute.StudentList.Add(lcStudent.ID, lcStudent);
                 UpdateDisplay();
             }
             //EditStudent(lcStudent);
@@ -52,7 +52,7 @@ namespace NMIT_Enrolment_Tutorial
 
         private void BtnModStudent_Click_1(object sender, EventArgs e)
         {
-            ClsStudent lcStudent = (ClsStudent)lstStudents.SelectedItem;
+            ClsStudent lcStudent = (ClsStudent)lstStudents.SelectedValue;
             if (lcStudent != null && lcStudent.ViewEdit())
             {
                 UpdateDisplay();

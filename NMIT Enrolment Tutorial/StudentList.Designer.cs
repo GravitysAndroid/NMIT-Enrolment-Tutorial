@@ -44,6 +44,7 @@
             this.lstStudents.Location = new System.Drawing.Point(12, 25);
             this.lstStudents.Name = "lstStudents";
             this.lstStudents.Size = new System.Drawing.Size(384, 186);
+            this.lstStudents.Sorted = true;
             this.lstStudents.TabIndex = 0;
             // 
             // CboStudentType

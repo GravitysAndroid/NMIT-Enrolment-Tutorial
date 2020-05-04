@@ -8,17 +8,18 @@ namespace NMIT_Enrolment_Tutorial
 {
     class ClsInstitute
     {
-        private static List<ClsStudent> _StudentList = new List<ClsStudent>();
+        //private static List<ClsStudent> _StudentList = new List<ClsStudent>();
+        private static Dictionary<string, ClsStudent> _StudentList = new Dictionary<string, ClsStudent>();
 
-        public static List<ClsStudent> StudentList 
-        { 
-            get => _StudentList; /*set => _StudentList = value;*/
+        public static Dictionary<string, ClsStudent> StudentList 
+        {
+            get => _StudentList; /*set => _StudentList = value;*/ 
         }
 
         public static decimal TotalBalance()
         {
             decimal lcTotal = 0;
-            foreach (ClsStudent lcStudent in _StudentList)
+            foreach (ClsStudent lcStudent in StudentList.Values)
                 lcTotal += lcStudent.Balance;
             return lcTotal;
         }

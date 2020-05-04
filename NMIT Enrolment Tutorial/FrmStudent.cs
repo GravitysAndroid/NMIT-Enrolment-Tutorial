@@ -37,8 +37,13 @@ namespace NMIT_Enrolment_Tutorial
 
         private void BtnOK_Click(object sender, EventArgs e)
         {
-            PushData();
-            DialogResult = DialogResult.OK;
+            if (TxtID.Enabled && ClsInstitute.StudentList.ContainsKey(TxtID.Text))
+                MessageBox.Show("Student with that ID already exists", "Duplicate ID");
+            else
+            {
+                PushData();
+                DialogResult = DialogResult.OK;
+            }
         }
 
         protected virtual void PushData()

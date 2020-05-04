@@ -16,7 +16,7 @@ namespace NMIT_Enrolment_Tutorial
 
         public override string ToString()
         {
-            return _ID + "\t\t\t" + _Name + "\t\t\t" + TypeOfStudent();
+            return _Name + "\t\t\t" + _ID + "\t\t\t" + TypeOfStudent();
         }
 
         public string ID
