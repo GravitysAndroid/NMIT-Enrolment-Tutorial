@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace NMIT_Enrolment_Tutorial
 {
+    [Serializable]
     abstract public class ClsStudent
     {
         private string _ID;

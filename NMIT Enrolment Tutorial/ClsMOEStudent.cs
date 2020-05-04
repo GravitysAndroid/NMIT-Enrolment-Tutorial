@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace NMIT_Enrolment_Tutorial
 {
+    [Serializable]
     class ClsMOEStudent : ClsStudent
     {
         private decimal _LoanAmount;

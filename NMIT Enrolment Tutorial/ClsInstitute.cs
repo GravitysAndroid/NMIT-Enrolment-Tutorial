@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace NMIT_Enrolment_Tutorial
 {
+    [Serializable]
     class ClsInstitute
     {
         //private static List<ClsStudent> _StudentList = new List<ClsStudent>();

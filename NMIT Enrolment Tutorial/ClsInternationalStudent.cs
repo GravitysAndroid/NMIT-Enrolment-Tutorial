@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace NMIT_Enrolment_Tutorial
 {
+    [Serializable]
     class ClsInternationalStudent : ClsStudent
     {
         private string _Country;

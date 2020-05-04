@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace NMIT_Enrolment_Tutorial
 {
+    [Serializable]
     static class Program
     {
         /// <summary>
