@@ -16,16 +16,34 @@ namespace NMIT_Enrolment_Tutorial
         public FrmMain()
         {
             InitializeComponent();
+            try
+            {
+                ClsInstitute.Retrieve();
+                LblStudentDetails.Text = string.Format("{0} Student(s)\nTotal Balance: {1:C}",
+                ClsInstitute.StudentList.Count, ClsInstitute.TotalBalance());
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.GetBaseException().Message);
+            }
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            try
+            {
+                ClsInstitute.Save();
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.GetBaseException().Message);
+            }
         }
 
         private void BtnManageStudents_Click_1(object sender, EventArgs e)
-        {
-            //FrmStudentList _FrmStudentList = new FrmStudentList();
+        {            
             _FrmStudentList.ShowDialog();
             LblStudentDetails.Text = string.Format("{0} Student(s)\nTotal Balance: {1:C}", ClsInstitute.StudentList.Count, ClsInstitute.TotalBalance());
         }

@@ -148,6 +148,7 @@
             this.Controls.Add(this.lstStudents);
             this.Name = "FrmStudentList";
             this.Text = "Student List";
+            this.Load += new System.EventHandler(this.FrmStudentList_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

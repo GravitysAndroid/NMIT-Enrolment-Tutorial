@@ -11,7 +11,7 @@ namespace NMIT_Enrolment_Tutorial
     {
         private decimal _LoanAmount;
         private bool _FullTime;
-        private FrmStudent _MOEStudentForm = new FrmMOEStudent();
+        private static FrmStudent _MOEStudentForm = new FrmMOEStudent();
 
         public decimal LoanAmount 
         { 

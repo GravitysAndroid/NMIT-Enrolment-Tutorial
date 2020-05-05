@@ -68,5 +68,10 @@ namespace NMIT_Enrolment_Tutorial
 
             }
         }
+
+        private void FrmStudentList_Load(object sender, EventArgs e)
+        {
+            UpdateDisplay();
+        }
     }
 }
